@@ -10,15 +10,23 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'scrooloose/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
+Plug 'feline-nvim/feline.nvim'
 Plug 'christoomey/vim-tmux-navigator'
-
+Plug 'github/copilot.vim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
 "Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-
+Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
 " Initialize plugin system
 call plug#end()
+
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
@@ -73,7 +81,11 @@ set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
 
-colorscheme dracula
+"move line of code up and down with alt + j/k
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
@@ -113,19 +125,27 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 " Use tab for trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-y>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-"inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<TAB>"
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-y>" :
+      \ "\<TAB>"
+"inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<TAB>"
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -133,6 +153,9 @@ autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%,
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType typescript map <buffer> <F9> :w<CR>:exec '!deno run --allow-all' shellescape(@%, 1)<CR>
 autocmd FileType typescript imap <buffer> <F9> <esc>:w<CR>:exec '!deno run --allow-all' shellescape(@%, 1)<CR>
+autocmd FileType rust map <buffer> <F9> :w<CR>:exec '!cargo run'<CR>
+autocmd FileType rust imap <buffer> <F9> <esc>:w<CR>:exec '!cargo run'<CR>
+
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
