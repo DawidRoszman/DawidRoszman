@@ -8,8 +8,8 @@ but you can also check out some of my other work on my personal account at https
 
 # My skills
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,ts,tailwind,py,flask,bash,git,godot,linux,react)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=vim,js,html,css,ts,tailwind,py,flask,bash,mysql,git,godot,linux,react)](https://skillicons.dev)
 
 # I had contact with
 
-[![My Skills](https://skillicons.dev/icons?i=django,vim,arduino,cs,dart,flutter,mysql,php,unity)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=django,arduino,cs,dart,flutter,php,unity)](https://skillicons.dev)
