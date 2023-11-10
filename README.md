@@ -3,8 +3,6 @@
 Hi, my name is Dawid and I have been interested in programming for a few years now.
 This is my new account if you want to see my older projects visit https://www.github.com/Shoter99. 
 
-Currently learning cybersecurity.
-
 🌐 Visit my portfolio website here: https://www.dawidroszman.eu
 
 # My skills
