@@ -7,7 +7,7 @@ This is my new account if you want to see my older projects visit https://www.gi
 
 # My skills
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,tailwind,py,mysql,git,linux,bash,vim,js,ts,react,nextjs)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=py,mysql,git,linux,bash,vim,html,css,tailwind,js,ts,react,nextjs)](https://skillicons.dev)
 
 # I had contact with
 
