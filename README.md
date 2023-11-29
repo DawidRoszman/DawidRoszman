@@ -7,8 +7,8 @@ This is my new account if you want to see my older projects visit https://www.gi
 
 # My skills
 
-[![My Skills](https://skillicons.dev/icons?i=vim,js,html,css,ts,tailwind,py,flask,bash,mysql,git,linux,react,nextjs)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,tailwind,py,mysql,git,linux,bash,vim,js,ts,react,nextjs)](https://skillicons.dev)
 
 # I had contact with
 
-[![My Skills](https://skillicons.dev/icons?i=django,arduino,cs,dart,flutter,php,unity,godot)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=django,flask,arduino,cs,dart,flutter,php,unity,godot)](https://skillicons.dev)
