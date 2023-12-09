@@ -1,6 +1,6 @@
 sudo pacman -Syu
 
-sudo pacman -S neovim tmux npm github-cli wget curl lazygit ripgrep fd gcc
+sudo pacman -S neovim tmux npm github-cli wget curl lazygit ripgrep fd gcc unzip
 
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
@@ -28,8 +28,13 @@ gh repo clone DawidRoszman/tmux-config ~/tmux-config
 
 ~/tmux-config/install.sh
 
+rm -rf ~/tmux-config
+
 wget https://raw.githubusercontent.com/ThePrimeagen/.dotfiles/master/bin/.local/scripts/tmux-sessionizer -O ~/.config/tm-sess.sh
 
 chmod u+x ~/.config/tm-sess.sh
 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip -O ~/Documents/FiraCode.zip
+
+unzip ~/Documents/FiraCode.zip -d ~/Documents/FiraCode
+rm ~/Documents/FiraCode.zip
