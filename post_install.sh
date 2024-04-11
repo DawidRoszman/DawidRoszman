@@ -38,3 +38,5 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.z
 
 unzip ~/Documents/FiraCode.zip -d ~/Documents/FiraCode
 rm ~/Documents/FiraCode.zip
+sudo mkdir -p /usr/local/share/fonts/ttf
+sudo mv ~/Documents/FiraCode /usr/local/share/fonts/ttf
