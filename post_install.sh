@@ -1,6 +1,6 @@
 sudo pacman -Syu
 
-sudo pacman -S neovim tmux npm github-cli wget curl lazygit ripgrep fd gcc unzip
+sudo pacman -S neovim tmux npm github-cli wget curl lazygit ripgrep fd gcc unzip go ranger
 
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
